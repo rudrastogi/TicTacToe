@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-title">Tic Tac Toe</h1>
+        
+        <div class="player-setup" id="playerSetup">
+            <h2>Enter Player Names</h2>
+            <div class="input-group">
+                <label for="player1">Player 1 (X):</label>
+                <input type="text" id="player1" placeholder="Enter name" maxlength="15">
+            </div>
+            <div class="input-group">
+                <label for="player2">Player 2 (O):</label>
+                <input type="text" id="player2" placeholder="Enter name" maxlength="15">
+            </div>
+            <button id="startGame" class="start-btn">Start Game</button>
+        </div>
+
+        <div class="game-area" id="gameArea" style="display: none;">
+            <div class="game-info">
+                <div class="current-player">
+                    <span id="currentPlayerName">Player 1</span>'s Turn
+                </div>
+                <div class="score">
+                    <span id="player1Score">Player 1: 0</span>
+                    <span id="player2Score">Player 2: 0</span>
+                </div>
+            </div>
+
+            <div class="game-board" id="gameBoard">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <div class="game-controls">
+                <button id="resetGame" class="control-btn">New Game</button>
+                <button id="changeNames" class="control-btn">Change Names</button>
+            </div>
+        </div>
+
+        <div class="winner-modal" id="winnerModal">
+            <div class="modal-content">
+                <h2 id="winnerText">Winner!</h2>
+                <button id="playAgain" class="play-again-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
